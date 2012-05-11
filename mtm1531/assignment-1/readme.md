@@ -6,6 +6,8 @@
 
 [Wikipedia Entry](http://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Sea "Twenty Thousand Leagues Under the Sea")
 
+***
+
 ## Excerpt ##
 
 Part One   
@@ -16,6 +18,8 @@ The year 1866 was signalised by a remarkable incident, a mysterious and puzzling
 For some time past vessels had been met by "an enormous thing," a long object, spindle-shaped, occasionally phosphorescent, and infinitely larger and more rapid in its movements than a whale.  
 
 [From Project Gutenberg](http://www.gutenberg.org/ebooks/164 "Project Gutenberg Link")
+
+***
 
 ## About Jules Verne ##
 
