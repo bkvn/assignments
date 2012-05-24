@@ -11,7 +11,7 @@ if (isset($_POST['input1']))
 	$input1 = $_POST['input1'];
 }
 
-if (isset($_POST[input2]))
+if (isset($_POST['input2']))
 {
 	$input2 = $_POST['input2'];
 }
@@ -70,7 +70,7 @@ $total = $temp * 1.13;
 				<option value="/">/</option>
 			</select>
 			
-			<button>Calculate</button>
+			<button type="button">Calculate</button>
 		
 			<strong>$<?php echo number_format($total, 2); ?></strong>
 			
