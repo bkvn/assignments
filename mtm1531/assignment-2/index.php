@@ -70,7 +70,7 @@ $total = $temp * 1.13;
 				<option value="/">/</option>
 			</select>
 			
-			<button type="button">Calculate</button>
+			<button>Calculate</button>
 		
 			<strong>$<?php echo number_format($total, 2); ?></strong>
 			
