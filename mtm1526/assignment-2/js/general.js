@@ -20,7 +20,7 @@ document.getElementById('add').addEventListener('click',  function(ev) {
 		addList.appendChild(addedItem);
 	}
 	
-	item.value = '';
+	input.value = '';
 	
 }, false);
 
