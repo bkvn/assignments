@@ -16,7 +16,7 @@ document.getElementById('add').addEventListener('click',  function(ev) {
 		var addedItem = document.createElement('li');
 		var addList = document.getElementById('list');
 		
-		addedItem.innerHTML = item.value;
+		addedItem.innerHTML = input.value;
 		addList.appendChild(addedItem);
 	}
 	
