@@ -1,0 +1,23 @@
+body {
+	width: 250px;
+	margin: 100px auto;
+}
+
+.removed {
+	text-decoration: line-through;
+	font-style: oblique;
+}
+
+.readded {
+	text-decoration: none;
+	font-style: none;
+}
+
+li {
+	list-style-type: square;
+}
+
+#errorMsg {
+	padding-top: 1em;
+	color: #f00;
+}

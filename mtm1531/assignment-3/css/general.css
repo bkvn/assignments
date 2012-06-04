@@ -1,0 +1,53 @@
+form {
+	width: 600px;
+	margin: 0 auto;
+	border: solid 0.25em #8FBC8F;
+	border-radius: 1em;
+	padding: 1em;
+	background-color: #698B69;
+	color: #FAFAFA;
+	font-family: 'Arial';
+}
+
+.inputWrapper  label {
+	display: block;
+}
+
+.inputWrapper input {
+	margin-bottom: 1em;
+}
+
+textarea {
+	vertical-align: middle;
+	width: 504px;
+	height: 50px;
+	display: block;
+	resize: none;
+}
+
+fieldset {
+	width: 480px;
+	margin-bottom:  1em;
+}
+
+button {
+	display: block;
+	margin-top: 1em;
+}
+
+strong {
+	font-size: 0.8em;
+	color: #DC143C;
+}
+
+#thankMsg {
+	width: 400px;
+	margin: 0 auto;
+	border: solid 0.25em #006400;
+	border-radius: 1em;
+}
+
+#thankMsg h1 {
+	color: #006400;
+	text-align: center;
+}
