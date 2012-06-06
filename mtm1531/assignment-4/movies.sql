@@ -3,11 +3,17 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 06, 2012 at 12:40 AM
+-- Generation Time: Jun 06, 2012 at 12:46 AM
 -- Server version: 5.5.9
 -- PHP Version: 5.3.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `movies`
