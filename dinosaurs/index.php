@@ -12,7 +12,6 @@ $sql = $db->query('
 
 $results = $sql->fetchAll();
 
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -22,6 +21,21 @@ $results = $sql->fetchAll();
     </head>
 
     <body>
+    	<form action="insert.php" method="post">
+        
+        	<label for="dinoName">Dino Name</label>
+        	<input type="text" name="dinoName" id="dinoName">
+            
+            <label for="lovesMeat">Loves Meat</label>
+        	<input type="text" name="lovesMeat" id="lovesMeat">
+            
+            <label for="jPark">In Jurassic Park</label>
+        	<input type="text" name="jPark" id="jPark">
+            
+            <button type="submit">Submit</button>
+        
+        </form>
+        
     	<?php foreach ($results as $dino) : ?>
         <h2><a href="single.php?id=<?php echo $dino['id']; ?>"><?php echo $dino['dino_name']; ?></a></h2>
     	<dl>
