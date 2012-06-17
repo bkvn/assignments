@@ -1,11 +1,11 @@
 <?php
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("localhost","root","root");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
   
- mysql_select_db("movies", $con); //both database and table name is movies
+ mysql_select_db("kova0058", $con);
  
  $sql="INSERT INTO movies (title, genre, director, release_date)
 VALUES

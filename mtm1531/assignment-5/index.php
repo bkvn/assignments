@@ -15,6 +15,7 @@ $results = $sql->fetchAll();
     <head>
         <meta charset="utf-8">
         <title>Movie List</title>
+        <link href="css/general.css" rel="stylesheet">
     </head>
     
     <body>
@@ -26,26 +27,28 @@ $results = $sql->fetchAll();
             <label for="genre">Genre</label>
         	<input type="text" name="genre" id="genre">
             
-            <label for="director">In Jurassic Park</label>
+            <label for="director">Director</label>
         	<input type="text" name="director" id="director">
         	
         	<label for="release_date">Release Date</label>
-        	<input type="text" name="release_date" id="release_date">
+        	<input type="text" name="release_date" id="release_date" placeholder="yyyy-mm-dd">
             
             <button type="submit">Submit</button>
         
         </form>
         
     	<?php foreach ($results as $movie) : ?>
-        <h2><a href="single.php?id=<?php echo $movie['id']; ?>"><?php echo $movie['title']; ?></a></h2>
-    	<dl>
-        	<dt>Genre</dt>
-            <dd><?php echo $movie['genre']; ?></dd>
-            <dt>Director</dt>
-            <dd><?php echo $movie['director']; ?></dd>
-            <dt>Release Date</dt>
-            <dd><?php echo $movie['release_date']; ?></dd>
-        </dl>
+    	<div id="movieList">
+			<h2><a href="single.php?id=<?php echo $movie['id']; ?>"><?php echo $movie['title']; ?></a></h2>
+			<dl>
+				<dt>Genre</dt>
+				<dd><?php echo $movie['genre']; ?></dd>
+				<dt>Director</dt>
+				<dd><?php echo $movie['director']; ?></dd>
+				<dt>Release Date</dt>
+				<dd><?php echo $movie['release_date']; ?></dd>
+			</dl>
+		</div>
         <?php endforeach; ?>
         
 	</body>
