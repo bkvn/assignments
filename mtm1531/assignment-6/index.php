@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <strong class="error">is required.</strong>
                 <?php endif; ?>
             </label>
-        	<input type="text" name="release_date" id="release_date" required value="<?php echo $release_date; ?>">
+        	<input type="text" name="release_date" id="release_date" required value="<?php echo $release_date; ?>" placeholder="yyyy-mm-dd">
             
             <button type="submit">Add</button>
         </form>
