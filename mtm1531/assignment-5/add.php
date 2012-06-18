@@ -1,13 +1,4 @@
 <?php
-require_once 'includes/db.php';
-
-$sql = $db->query('
-	SELECT id, title, genre, director, release_date
-	FROM movies
-	ORDER BY title ASC
-');
-
-$results = $sql->fetchAll();
 
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
 $genre = filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING);
@@ -48,19 +39,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		exit;
 	}
 }
-?>
-<!DOCTYPE HTML>
+?><!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Movie List</title>
+        <title>Add Movie</title>
         <link href="css/general.css" rel="stylesheet">
     </head>
-    
-    <body>
 
-		<h1>Add Movie</h1>        
-        <form id="addMovie" action="index.php" method="post">
+    <body>
+    
+    	<form action="add.php" method="post">
         
         	<label for="title">Title
             	<?php if (isset($errors['title'])) : ?>
@@ -91,22 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         	<input type="text" name="release_date" id="release_date" required value="<?php echo $release_date; ?>">
             
             <button type="submit">Add</button>
+            
+            <a href="index.php">Back to Home</a>
+        
         </form>
-        
-        <div id="movieList">
-    		<h1>Movie List</h1>
-    		<?php foreach ($results as $movie) : ?>
-			<h2><a href="single.php?id=<?php echo $movie['id']; ?>"><?php echo $movie['title']; ?></a></h2>
-			<dl>
-				<dt>Genre</dt>
-				<dd><?php echo $movie['genre']; ?></dd>
-				<dt>Director</dt>
-				<dd><?php echo $movie['director']; ?></dd>
-				<dt>Release Date</dt>
-				<dd><?php echo $movie['release_date']; ?></dd>
-			</dl>
-        	<?php endforeach; ?>
-        </div>
-        
-	</body>
+    </body>
 </html>

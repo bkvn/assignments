@@ -35,6 +35,8 @@ $results = $sql->fetch();
             <dd><?php echo $results['release_date']; ?></dd>
         </dl>
         
-        <a href="delete.php?id=<?php echo $id; ?>">Delete</a>        
+        <p><a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+        <a href="edit.php?id=<?php echo $id; ?>">Edit</a></p>
+        <a href="index.php">Back to Home</a>
     </body>
 </html>
