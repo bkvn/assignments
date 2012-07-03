@@ -1,0 +1,141 @@
+form {
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 2em;
+	background-color: #10349A;
+	border: 0.75em solid #ECEFF2;
+	border-radius: 1em;
+	padding: 1em;
+	font-family: 'Tahoma';
+	color: #ECEFF2;
+}
+
+.user-available[data-status="unchecked"] {
+	display: none;
+}
+
+.user-available:before {
+	content: "✔";
+}
+
+.user-available[data-status="available"] {
+	color: #090;
+}
+
+.user-available[data-status="unavailable"] {
+	color: #f33;
+}
+
+.user-available[data-status="unavailable"]:before {
+	content: "✖";
+}
+
+
+
+#passwordRequirements li:before {
+	color: #f33;
+	content: "✖";
+}
+
+#passwordRequirements li[data-state="achieved"]:before {
+	color: #090;
+	content: "✔";
+}
+
+
+
+.city-correct {
+	position: relative;
+	left: 4.8em;
+}
+
+.city-correct[data-status="unchecked"] {
+	display: none;
+}
+
+.city-correct[data-status="correct"]:before {
+	color: #090;
+	content: "✔";
+}
+
+.city-correct[data-status="incorrect"]:before {
+	color: #f33;
+	content: "✖";
+}
+
+
+
+.zip-correct[data-status="unchecked"] {
+	display: none;
+}
+
+
+.zip-correct[data-status="valid"]:before {
+	color: #090;
+	content: "✔";
+}
+
+.zip-correct[data-status="invalid"]:before {
+	color: #f33;
+	content: "✖";
+}
+
+
+label[for="username"],
+label[for="password"],
+label[for="email"],
+label[for="city"],
+label[for="zip"] {
+	position: absolute;
+}
+
+.characterInput {
+	position: relative;
+	margin-bottom: 0.75em;
+	padding: 0;
+	left: 9em;
+	top: 0.25em;
+	vertical-align: middle;
+	width: 15em;
+}
+
+label[for="province"] {
+	position: absolute;
+}
+
+.stateSelect {
+	position: relative;
+	left: 9em;
+}
+
+#passwordRequirements {
+	position: relative;
+	left: 3.5em;
+	font-size: 14px;
+	color: #D82E33;
+	list-style-type: none;
+}
+
+fieldset {
+	position: relative;
+	left: 6em;
+	margin-top: 1em;
+	width: 9em;
+}
+
+fieldset  {
+	text-align: center;
+	padding-top: 0.50em;
+	padding-bottom: 0.75em;
+	margin-bottom: 1em;
+}
+
+fieldset legend {
+	text-align: left;
+}
+
+button {
+	position: relative;
+	left: 18.3em;
+	margin-top: 1em;
+}
