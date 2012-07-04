@@ -1,8 +1,8 @@
 <?php
 
-$dsn = getenv('DB_DSN');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
+$data_source = getenv('DATA_SOURCE');
 
-$db = new PDO($dsn, $user, $pass);
+$db = new PDO($data_source, $user, $pass);
 $db->exec('SET NAMES utf-8');

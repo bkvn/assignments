@@ -10,6 +10,11 @@ form {
 	color: #ECEFF2;
 }
 
+.user-available {
+	position: relative;
+	left: 6em;
+}
+
 .user-available[data-status="unchecked"] {
 	display: none;
 }
@@ -40,6 +45,41 @@ form {
 #passwordRequirements li[data-state="achieved"]:before {
 	color: #090;
 	content: "✔";
+}
+
+
+
+.email-available {
+	position: relative;
+	left: 6em;
+}
+
+.email-available[data-status="unchecked"] {
+	display: none;
+}
+
+.email-available:before {
+	content: "✔";
+}
+
+.email-available[data-status="available"] {
+	color: #090;
+}
+
+.email-available[data-status="unavailable"] {
+	color: #f33;
+}
+
+.email-available[data-status="unavailable"]:before {
+	content: "✖";
+}
+
+.email-available[data-status="invalid"] {
+	color: #f33;
+}
+
+.email-available[data-status="invalid"]:before {
+	content: "✖";
 }
 
 
@@ -110,9 +150,8 @@ label[for="province"] {
 
 #passwordRequirements {
 	position: relative;
-	left: 3.5em;
+	left: 4.1em;
 	font-size: 14px;
-	color: #D82E33;
 	list-style-type: none;
 }
 
@@ -136,6 +175,6 @@ fieldset legend {
 
 button {
 	position: relative;
-	left: 18.3em;
+	left: 19.3em;
 	margin-top: 1em;
 }
