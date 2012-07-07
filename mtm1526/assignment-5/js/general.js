@@ -3,7 +3,6 @@ $(document).ready(function () {
 	var userAvailable = $('.user-available');
 	var emailAvailable = $('.email-available');
 	var passwordReqs = 0;
-	var zipCorrect = $('.zip-correct');
 	
 	$('#username').on('change', function (ev) {
 		var username = $(this).val();
@@ -24,7 +23,7 @@ $(document).ready(function () {
 			});
 		}
 		else {
-			userAvailable.attr('data-status', 'unavailable').html('Unavailable');
+			userAvailable.attr('data-status', 'invalid').html('Invalid');
 		}
 	});
 	
@@ -108,12 +107,11 @@ $(document).ready(function () {
 		$('#countryInfo').load('usa-info.html');
 	});
 	
-	$('#zip').on('change', function () {
+	$('#countryInfo').on('change', '#zip', function () {
 		var zipCheck;
 		
 		if ($('[name="country"]:checked').val() == 'ca') {
 			zipCheck = /^[a-zA-Z]\d[a-zA-Z]\s\d[a-zA-Z]\d$/;
-			console.log('test');
 		}
 		
 		if ($('[name="country"]:checked').val() == 'us') {
@@ -121,10 +119,10 @@ $(document).ready(function () {
 		}
 		
 		if ($(this).val().match(zipCheck)) {
-			zipCorrect.attr('data-status', 'valid');
+			$('.zip-correct').attr('data-status', 'valid').html('Valid');
 		}
 		else {
-			zipCorrect.attr('data-status', 'invalid');
+			$('.zip-correct').attr('data-status', 'invalid').html('Invalid');
 		}
 	});
 	
@@ -132,11 +130,12 @@ $(document).ready(function () {
 		if (
 			userAvailable.attr('data-status') == 'unchecked'
 			|| userAvailable.attr('data-status') == 'unavailable'
+			|| userAvailable.attr('data-status') == 'invalid'
 			|| passwordReqs < 5
 			|| emailAvailable.attr('data-status') == 'unchecked'
 			|| emailAvailable.attr('data-status') == 'unavailable'
 			|| cityCheck == false
-			|| zipCorrect.attr('zip-check') == 'invalid'
+			|| $('.zip-correct').attr('data-status') == 'invalid'
 			)
 			{
 				ev.preventDefault();

@@ -1,5 +1,5 @@
 form {
-	width: 500px;
+	width: 400px;
 	margin: 0 auto;
 	margin-top: 2em;
 	background-color: #10349A;
@@ -11,8 +11,7 @@ form {
 }
 
 .user-available {
-	position: relative;
-	left: 6em;
+	margin-left: 6.5em;
 }
 
 .user-available[data-status="unchecked"] {
@@ -35,6 +34,14 @@ form {
 	content: "✖";
 }
 
+.user-available[data-status="invalid"] {
+	color: #f33;
+}
+
+.user-available[data-status="invalid"]:before {
+	content: "✖";
+}
+
 
 
 #passwordRequirements li:before {
@@ -50,8 +57,7 @@ form {
 
 
 .email-available {
-	position: relative;
-	left: 6em;
+	margin-left: 6.5em;
 }
 
 .email-available[data-status="unchecked"] {
@@ -85,8 +91,7 @@ form {
 
 
 .city-correct {
-	position: relative;
-	left: 4.8em;
+	margin-left: 6.5em;
 }
 
 .city-correct[data-status="unchecked"] {
@@ -105,20 +110,30 @@ form {
 
 
 
+.zip-correct {
+	margin-left: 6.5em;
+}
+
 .zip-correct[data-status="unchecked"] {
 	display: none;
 }
 
-
-.zip-correct[data-status="valid"]:before {
-	color: #090;
+.zip-correct:before {
 	content: "✔";
 }
 
-.zip-correct[data-status="invalid"]:before {
+.zip-correct[data-status="valid"] {
+	color: #090;
+}
+
+.zip-correct[data-status="invalid"] {
 	color: #f33;
+}
+
+.zip-correct[data-status="invalid"]:before {
 	content: "✖";
 }
+
 
 
 label[for="username"],
